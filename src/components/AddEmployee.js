@@ -1,6 +1,13 @@
 import React from "react";
 
 const AddEmployee = () => {
+
+const [employee, setEmployee] = useState({
+    id:"",
+    firstName:"",
+    lastName:"",
+}); 
+
   return (
     <div className="flex max-w-2xl mx-auto shadow border-b">
       <div className="px-8 py-8">
@@ -13,6 +20,8 @@ const AddEmployee = () => {
           </label>
           <input
             type="text"
+            name="firstName"
+            value={employee.firstName}
             className="h-10 w-96 border mt-2 px-2 py-2"
           ></input>
         </div>
@@ -22,6 +31,8 @@ const AddEmployee = () => {
           </label>
           <input
             type="text"
+            name="lastName"
+            value={employee.lastName}
             className="h-10 w-96 border mt-2 px-2 py-2"
           ></input>
         </div>
@@ -31,6 +42,8 @@ const AddEmployee = () => {
           </label>
           <input
             type="email"
+            name="emailId"
+            value={employee.emailId}
             className="h-10 w-96 border mt-2 px-2 py-2"
           ></input>
         </div>
