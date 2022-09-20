@@ -39,7 +39,7 @@ const saveEmployee = (e) => {
             type="text"
             name="firstName"
             value={employee.firstName}
-            render = {({ onChange, e}) => handleChange(e)} 
+            onChange={(e) => handleChange(e)} 
             className="h-10 w-96 border mt-2 px-2 py-2"
           ></input>
         </div>
@@ -51,7 +51,7 @@ const saveEmployee = (e) => {
             type="text"
             name="lastName"
             value={employee.lastName}
-            render = {({ onChange, e}) => handleChange(e)} 
+            onChange={(e) => handleChange(e)} 
             className="h-10 w-96 border mt-2 px-2 py-2"
           ></input>
         </div>
@@ -63,7 +63,7 @@ const saveEmployee = (e) => {
             type="email"
             name="emailId"
             value={employee.emailId}
-            render = {({ onChange, e}) => handleChange(e)} 
+            onChange={(e) => handleChange(e)} 
             className="h-10 w-96 border mt-2 px-2 py-2"
           ></input>
         </div>
