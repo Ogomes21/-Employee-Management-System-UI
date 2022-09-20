@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import AddEmployee from "./components/AddEmployee";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import EmployeeList from "./components/EmployeeList";
 
 //function that returns the entire HTML
@@ -11,8 +11,12 @@ function App() {
     <>
     <BrowserRouter>
     <Navbar />
-    <AddEmployee />
-    <EmployeeList />
+    <Routes>
+      <Route index element={<EmployeeList />} />
+      <Route path="/" element={<EmployeeList />}></Route>
+      <Route path="/employeeList" element={<EmployeeList />} />
+      <Route path="/addEmployee" element={<AddEmployee />} />
+    </Routes>
     </BrowserRouter>
     </>
   );
